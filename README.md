@@ -1,4 +1,4 @@
-# Python3-uWSGI-bower
+# Python3-uWSGI-bower-grunt
 
 To setup your application: put your requirements.txt file in the ./src directory, your uwsgi.ini file in the ./uwsgi directory, and include a Dockerfile like this in the project root.
 
@@ -10,7 +10,10 @@ FROM paulflorea/python3-uswgi-bower:latest
 ADD . /var/www/app/
 RUN pip install -r /var/www/app/src/requirements.txt
 
-RUN cd /var/www/app/static; bower install --allow-root
+RUN cd /var/www/app/static;\
+    npm install;\
+    bower install --allow-root;\
+    grunt build;
 
 # set user
 USER www-data
