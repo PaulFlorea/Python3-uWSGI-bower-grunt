@@ -4,7 +4,7 @@ To setup your application: put your requirements.txt file in the ./src directory
 
 
 ```
-FROM paulflorea/python3-uswgi-bower-grunt:latest
+FROM paulflorea/python3-uwsgi-bower-grunt:latest
 
 # install my packages
 ADD . /var/www/app/
